@@ -5,24 +5,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LoginTests {
-    @Test(priority = 1, groups = { "positiveTests", "smokeTests" })
-    public void positiveLoginTest() {
-        System.out.println("Starting login test");
 
+    private WebDriver driver;
 
-    //CREATE DRIVER
+    @BeforeMethod(alwaysRun = true)
+    private void setUp() {
+
+        //CREATE DRIVER
         System.setProperty("webdriver.com.edge.driver", "src/main/resources/msedgedriver.exe");
-        WebDriver driver = new EdgeDriver();
+        driver = new EdgeDriver();
 
-    //sleep for 3 seconds
+        //sleep for 3 seconds
         sleep(2000);
 
-    //maximize browser window
+        //maximize browser window
         driver.manage().window().maximize();
+
+    }
+
+    @Test(priority = 1, groups = { "positiveTests", "smokeTests" })
+    public void positiveLoginTest() {
+
+        System.out.println("Starting login test");
 
     //open test page
         String url = "http://the-internet.herokuapp.com/login";
@@ -61,10 +71,7 @@ public class LoginTests {
         Assert.assertTrue(actualMessage.contains(expectedMessage),"Actual message is not the same as expected.\nActual Message: " + actualMessage
                 + "\nExpected Message: " + expectedMessage);
 
-    //close browser
-        driver.quit();
-
-   }
+    }
 
     @Parameters({ "username", "password", "expectedMessage" })
     @Test(priority = 2, groups = { "negativeTests", "smokeTests" })
@@ -72,28 +79,15 @@ public class LoginTests {
 
         System.out.println("Starting negativeLoginTest with " + username + " and " + password);
 
-        //CREATE DRIVER
-        System.setProperty("webdriver.com.edge.driver", "src/main/resources/msedgedriver.exe");
-        WebDriver driver = new EdgeDriver();
-
-        //sleep for 3 seconds
-        sleep(3000);
-
-        //maximize browser window
-        driver.manage().window().maximize();
-
         //open test page
         String url = "https://the-internet.herokuapp.com/login";
         driver.get(url);
 
-        //verifications:
-        //incorrect username and correct password
-
-        //enter incorrect username
+        //enter username
         WebElement usernameElement = driver.findElement(By.xpath("/html//input[@id='username']"));
         usernameElement.sendKeys(username);
 
-        //enter correct password
+        //enter password
         WebElement passwordElement = driver.findElement(By.name("password"));
         passwordElement.sendKeys(password);
 
@@ -110,17 +104,22 @@ public class LoginTests {
         Assert.assertTrue(actualFailMessage.contains(expectedFailMessage), "Fail message is not the same as expected\nActual message: "
                 + actualFailMessage + "\nExpected message: " + expectedFailMessage);
 
-        //close browser
-        driver.quit();
-
     }
 
+    //sleep for m seconds
     private static void sleep(long m) {
         try {
             Thread.sleep(m);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    //close browser
+    @AfterMethod(alwaysRun = true)
+    private void tearDown() {
+        //close browser
+        driver.quit();
     }
 
 }
