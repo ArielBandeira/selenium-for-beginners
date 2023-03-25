@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2051ac38-cf17-4bac-9ac5-ca68d22ae84a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/ExceptionsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/ExceptionsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/ExceptionsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/NoSuchElementExceptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestSuites/Debug.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestSuites/Debug.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,16 +153,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/LoginTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium-for-beginners" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/LoginTests.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/NegativeTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-for-beginners" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/NegativeTests.xml" />
@@ -172,7 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExceptionsTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ElementNotInteractableExceptionTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-for-beginners" />
       <extension name="coverage">
         <pattern>
@@ -181,7 +172,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
-      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.ExceptionsTests" />
+      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.ElementNotInteractableExceptionTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -189,27 +180,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ElementNotInteractableExceptionTest.textIsSavedTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-for-beginners" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.herokuapp.theinternet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
-      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.LoginTests" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
+      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.ElementNotInteractableExceptionTest" />
+      <option name="METHOD_NAME" value="textIsSavedTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InvalidElementStateExceptionTest.editInputTextTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-for-beginners" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.herokuapp.theinternet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
+      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.InvalidElementStateExceptionTest" />
+      <option name="METHOD_NAME" value="editInputTextTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -219,21 +219,25 @@
     <list>
       <item itemvalue="Maven.Positive Tests" />
       <item itemvalue="Maven.Negative Tests" />
+      <item itemvalue="TestNG.ElementNotInteractableExceptionTest" />
+      <item itemvalue="TestNG.ElementNotInteractableExceptionTest.textIsSavedTest" />
+      <item itemvalue="TestNG.InvalidElementStateExceptionTest.editInputTextTest" />
       <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/Debug.xml" />
-      <item itemvalue="TestNG.ExceptionsTests" />
-      <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/LoginTests.xml" />
-      <item itemvalue="TestNG.LoginTests" />
       <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/NegativeTests.xml" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/Debug.xml" />
-        <item itemvalue="TestNG.ExceptionsTests" />
-        <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/LoginTests.xml" />
+        <item itemvalue="TestNG.InvalidElementStateExceptionTest.editInputTextTest" />
+        <item itemvalue="TestNG.ElementNotInteractableExceptionTest" />
+        <item itemvalue="TestNG.ElementNotInteractableExceptionTest.textIsSavedTest" />
         <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/NegativeTests.xml" />
-        <item itemvalue="TestNG.LoginTests" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SliceToolwindowSettings">
+    <option name="autoScroll" value="true" />
+    <option name="preview" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

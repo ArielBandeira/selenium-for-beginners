@@ -11,7 +11,7 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class ExceptionsTests {
+public class ElementNotInteractableExceptionTest {
 
     private WebDriver driver;
     @Parameters({ "browser" })
@@ -28,7 +28,7 @@ public class ExceptionsTests {
     }
 
     @Test
-    public void addNewRowTest() {
+    public void textIsSavedTest() {
         System.out.println("Starting addNewRowTest");
 
         //open test page
@@ -39,7 +39,7 @@ public class ExceptionsTests {
         sleep(2000);
 
         //click on add button
-        WebElement addButton = driver.findElement(By.xpath("/html//button[@id='add_btn']"));
+        WebElement addButton = driver.findElement(By.xpath("//button[@id='add_btn']"));
         addButton.click();
 
         //check if row 2 is displayed
@@ -47,6 +47,20 @@ public class ExceptionsTests {
         WebElement row2Input = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='row2']/input")));
 
         Assert.assertTrue(row2Input.isDisplayed(), "Row 2 input is not displayed");
+
+        //Type text into the second input field
+        row2Input.sendKeys("Lasagna");
+
+        sleep(5000);
+
+        //Push Save button using locator By.name(“Save”)
+        WebElement saveButton = driver.findElement(By.xpath("//div[@id='row2']/button[@id='save_btn']"));
+        saveButton.click();
+
+        //Verify text saved
+        WebElement saveConfirmationMessage = driver.findElement(By.id("confirmation"));
+        String confirmationText = saveConfirmationMessage.getText();
+        Assert.assertEquals(confirmationText, "Row 2 was saved", "Confirmation message is not the expected");
 
     }
 
@@ -65,4 +79,5 @@ public class ExceptionsTests {
         //close browser
         driver.quit();
     }
+
 }
