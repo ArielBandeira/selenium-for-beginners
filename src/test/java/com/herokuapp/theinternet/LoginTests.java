@@ -3,6 +3,7 @@ package com.herokuapp.theinternet;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -13,13 +14,25 @@ import org.testng.annotations.Test;
 public class LoginTests {
 
     private WebDriver driver;
-
+    @Parameters({ "browser" })
     @BeforeMethod(alwaysRun = true)
-    private void setUp() {
+    private void setUp(String browser) {
 
         //CREATE DRIVER
-        System.setProperty("webdriver.com.edge.driver", "src/main/resources/msedgedriver.exe");
-        driver = new EdgeDriver();
+        switch (browser) {
+            case "chrome":
+                System.setProperty("webdriver.com.chrome.driver", "src/main/resources/chromedriver.exe");
+                driver = new ChromeDriver();
+                break;
+
+            case "edge":
+                System.setProperty("webdriver.com.edge.driver", "src/main/resources/msedgedriver.exe");
+                driver = new EdgeDriver();
+                break;
+
+            default:
+                break;
+        }
 
         //sleep for 3 seconds
         sleep(2000);
