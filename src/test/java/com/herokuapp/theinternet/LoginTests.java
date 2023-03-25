@@ -3,36 +3,40 @@ package com.herokuapp.theinternet;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class LoginTests {
 
     private WebDriver driver;
     @Parameters({ "browser" })
     @BeforeMethod(alwaysRun = true)
-    private void setUp(String browser) {
+    private void setUp(@Optional("edge") String browser) {
 
         //CREATE DRIVER
-        switch (browser) {
+/*        switch (browser) {
             case "chrome":
                 System.setProperty("webdriver.com.chrome.driver", "src/main/resources/chromedriver.exe");
                 driver = new ChromeDriver();
                 break;
 
-            case "edge":
-                System.setProperty("webdriver.com.edge.driver", "src/main/resources/msedgedriver.exe");
-                driver = new EdgeDriver();
+            case "firefox":
+                System.setProperty("webdriver.com.gecko.driver", "src/main/resources/geckodriver.exe");
+                driver = new FirefoxDriver();
                 break;
 
             default:
+                System.out.println("Do not know how to start " + browser + ", starting edge instead");
+                System.setProperty("webdriver.com.edge.driver", "src/main/resources/msedgedriver.exe");
+                driver = new EdgeDriver();
                 break;
-        }
+        }*/
+
+        System.setProperty("webdriver.com.edge.driver", "src/main/resources/msedgedriver.exe");
+        driver = new EdgeDriver();
 
         //sleep for 3 seconds
         sleep(2000);
