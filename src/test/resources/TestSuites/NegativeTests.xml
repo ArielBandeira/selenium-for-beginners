@@ -3,9 +3,21 @@
 <suite name="NegativeTestsSuite" verbose="1" >
 
     <test name="NegativeTests">
+
+<!--        <groups>
+            <run>
+                <include name="smokeTests"/>
+            </run>
+        </groups>-->
+
         <classes>
-            <class name="com.herokuapp.theinternet.NegativeTests"/>
+            <class name="com.herokuapp.theinternet.NegativeTests">
+                <methods>
+                    <exclude name="incorrectPasswordTest" />
+                </methods>
+            </class>
         </classes>
+
     </test>
 
 </suite>

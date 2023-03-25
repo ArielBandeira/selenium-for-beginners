@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class NegativeTests {
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = { "negativeTests", "smokeTests" })
     public void incorrectUsernameTest() {
 
         //CREATE DRIVER
@@ -56,7 +56,7 @@ public class NegativeTests {
 
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = { "negativeTests" })
     public void incorrectPasswordTest() {
 
         //CREATE DRIVER
