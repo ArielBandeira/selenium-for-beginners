@@ -5,12 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class NegativeTests {
 
+    @Parameters({ "username", "password", "expectedMessage" })
     @Test(priority = 1, groups = { "negativeTests", "smokeTests" })
-    public void incorrectUsernameTest() {
+    public void negativeLoginTest(String username, String password, String expectedMessage) {
 
         //CREATE DRIVER
         System.setProperty("webdriver.com.edge.driver", "src/main/resources/msedgedriver.exe");
@@ -56,7 +58,7 @@ public class NegativeTests {
 
     }
 
-    @Test(priority = 2, groups = { "negativeTests" })
+/*    @Test(priority = 2, groups = { "negativeTests" })
     public void incorrectPasswordTest() {
 
         //CREATE DRIVER
@@ -101,7 +103,7 @@ public class NegativeTests {
         //close browser
         driver.quit();
 
-    }
+    }*/
 
     private static void sleep(long m) {
         try {
