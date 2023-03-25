@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -40,11 +42,10 @@ public class ExceptionsTests {
         WebElement addButton = driver.findElement(By.xpath("/html//button[@id='add_btn']"));
         addButton.click();
 
-        //implicit wait
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
         //check if row 2 is displayed
-        WebElement row2Input = driver.findElement(By.xpath("//div[@id='row2']/input"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement row2Input = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='row2']/input")));
+
         Assert.assertTrue(row2Input.isDisplayed(), "Row 2 input is not displayed");
 
     }
