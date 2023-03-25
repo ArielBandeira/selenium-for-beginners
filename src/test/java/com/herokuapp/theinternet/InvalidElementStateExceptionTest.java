@@ -40,6 +40,8 @@ public class InvalidElementStateExceptionTest {
 
         //Clear input field
         WebElement inputTextRow1 = driver.findElement(By.xpath("//div[@id='row1']/input"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(inputTextRow1));
         inputTextRow1.clear();
 
         //Type text into the input field
@@ -53,7 +55,7 @@ public class InvalidElementStateExceptionTest {
         String value = inputTextRow1.getAttribute("value");
         Assert.assertEquals(value, "Lasagna", "Input 1 field value is not expected");
 
-        WebElement saveConfirmationMessage = driver.findElement(By.id("confirmation"));
+        WebElement saveConfirmationMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("confirmation")));
         String confirmationText = saveConfirmationMessage.getText();
         Assert.assertEquals(confirmationText, "Row 1 was saved", "Confirmation message is not the expected");
 
