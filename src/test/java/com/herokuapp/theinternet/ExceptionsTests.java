@@ -7,6 +7,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import java.time.Duration;
+
 public class ExceptionsTests {
 
     private WebDriver driver;
@@ -38,16 +40,12 @@ public class ExceptionsTests {
         WebElement addButton = driver.findElement(By.xpath("/html//button[@id='add_btn']"));
         addButton.click();
 
-        //check if row 2 is displayed
-        try {
-            WebElement row2Input = driver.findElement(By.xpath("//div[@id='row2']/input"));
-            Assert.assertTrue(row2Input.isDisplayed(), "Row 2 input is not displayed");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        //implicit wait
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        //sleep for 5 seconds
-        sleep(5000);
+        //check if row 2 is displayed
+        WebElement row2Input = driver.findElement(By.xpath("//div[@id='row2']/input"));
+        Assert.assertTrue(row2Input.isDisplayed(), "Row 2 input is not displayed");
 
     }
 
