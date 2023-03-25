@@ -18,7 +18,7 @@ public class PositiveTests {
         WebDriver driver = new EdgeDriver();
 
     //sleep for 3 seconds
-        sleep(3000);
+        sleep(2000);
 
     //maximize browser window
         driver.manage().window().maximize();
@@ -26,6 +26,7 @@ public class PositiveTests {
     //open test page
         String url = "http://the-internet.herokuapp.com/login";
         driver.get(url);
+        //driver.navigate().to("http://the-internet.herokuapp.com/login");
 
     //enter username
         WebElement username = driver.findElement(By.id("username"));
@@ -61,7 +62,6 @@ public class PositiveTests {
 
     //close browser
         driver.quit();
-
 
    }
 
