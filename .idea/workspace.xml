@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f54a804-d7c4-4bbe-8e85-409c26f5f7f3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/PositiveTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/PositiveTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/NegativeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/NegativeTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +14,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,7 +65,34 @@
       <recent name="C:\Users\ariel\learning_projects\selenium\selenium-for-beginners\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PositiveTests">
+  <component name="RunManager" selected="TestNG.NegativeTests.incorrectPasswordTest">
+    <configuration name="Negative Tests" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="-Dtest=NegativeTests" />
+                <option value="clean" />
+                <option value="test" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="Positive Tests" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -87,7 +120,7 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="PositiveTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="NegativeTests.incorrectPasswordTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-for-beginners" />
       <extension name="coverage">
         <pattern>
@@ -96,16 +129,51 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
-      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.PositiveTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.NegativeTests" />
+      <option name="METHOD_NAME" value="incorrectPasswordTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PositiveTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-for-beginners" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.herokuapp.theinternet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
+      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.PositiveTests" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.Positive Tests" />
+      <item itemvalue="Maven.Negative Tests" />
+      <item itemvalue="TestNG.NegativeTests.incorrectPasswordTest" />
+      <item itemvalue="TestNG.PositiveTests" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.NegativeTests.incorrectPasswordTest" />
         <item itemvalue="TestNG.PositiveTests" />
       </list>
     </recent_temporary>
