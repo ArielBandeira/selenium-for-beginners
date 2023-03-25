@@ -45,9 +45,17 @@ public class InvalidElementStateExceptionTest {
         //Type text into the input field
         inputTextRow1.sendKeys("Lasagna");
 
+        //Save new text
+        WebElement saveButton = driver.findElement(By.id("save_btn"));
+        saveButton.click();
+
         //Verify text changed
         String value = inputTextRow1.getAttribute("value");
         Assert.assertEquals(value, "Lasagna", "Input 1 field value is not expected");
+
+        WebElement saveConfirmationMessage = driver.findElement(By.id("confirmation"));
+        String confirmationText = saveConfirmationMessage.getText();
+        Assert.assertEquals(confirmationText, "Row 1 was saved", "Confirmation message is not the expected");
 
     }
 
