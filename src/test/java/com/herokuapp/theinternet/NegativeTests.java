@@ -12,7 +12,9 @@ public class NegativeTests {
 
     @Parameters({ "username", "password", "expectedMessage" })
     @Test(priority = 1, groups = { "negativeTests", "smokeTests" })
-    public void negativeLoginTest(String username, String password, String expectedMessage) {
+    public void negativeLoginTest(String username, String password, String expectedFailMessage) {
+
+        System.out.println("Starting negativeLoginTest with " + username + " and " + password);
 
         //CREATE DRIVER
         System.setProperty("webdriver.com.edge.driver", "src/main/resources/msedgedriver.exe");
@@ -32,12 +34,12 @@ public class NegativeTests {
         //incorrect username and correct password
 
         //enter incorrect username
-        WebElement username = driver.findElement(By.xpath("/html//input[@id='username']"));
-        username.sendKeys("incorrect");
+        WebElement usernameElement = driver.findElement(By.xpath("/html//input[@id='username']"));
+        usernameElement.sendKeys(username);
 
         //enter correct password
-        WebElement password = driver.findElement(By.name("password"));
-        password.sendKeys("SuperSecretPassword!");
+        WebElement passwordElement = driver.findElement(By.name("password"));
+        passwordElement.sendKeys(password);
 
         //click login button
         WebElement loginButton = driver.findElement(By.xpath("//form[@id='login']/button[@class='radius']"));
@@ -48,7 +50,6 @@ public class NegativeTests {
 
         //fail login message
         WebElement failMessage = driver.findElement(By.xpath("/html//div[@id='flash']"));
-        String expectedFailMessage = "Your username is invalid!";
         String actualFailMessage = failMessage.getText();
         Assert.assertTrue(actualFailMessage.contains(expectedFailMessage), "Fail message is not the same as expected\nActual message: "
                 + actualFailMessage + "\nExpected message: " + expectedFailMessage);

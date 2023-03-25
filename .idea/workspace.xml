@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f54a804-d7c4-4bbe-8e85-409c26f5f7f3" name="Changes" comment="" />
+    <list default="true" id="9f54a804-d7c4-4bbe-8e85-409c26f5f7f3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/NegativeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/NegativeTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,10 +222,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/NegativeTests.xml" />
         <item itemvalue="TestNG.PositiveTests" />
         <item itemvalue="TestNG.NegativeTests.incorrectPasswordTest" />
         <item itemvalue="TestNG.NegativeTests" />
-        <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/NegativeTests.xml" />
         <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/AllTests.xml" />
       </list>
     </recent_temporary>
