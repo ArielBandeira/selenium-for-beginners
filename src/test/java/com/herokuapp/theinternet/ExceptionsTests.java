@@ -28,34 +28,28 @@ public class ExceptionsTests {
         System.out.println("Starting addNewRowTest");
 
         //open test page
-        System.out.println("open test page");
         String url = "https://practicetestautomation.com/practice-test-exceptions/";
         driver.get(url);
 
         //sleep for 2 seconds
-        System.out.println("sleep for 2 seconds");
         sleep(2000);
 
         //click on add button
-        System.out.println("click on add button");
         WebElement addButton = driver.findElement(By.xpath("/html//button[@id='add_btn']"));
         addButton.click();
 
         //check if row 2 is displayed
-        System.out.println("check if row 2 is displayed");
-        WebElement row2 = driver.findElement(By.xpath("//div[@id='rows']/div[3]/div[@class='row']/input[@type='text']"));
-        Assert.assertTrue(row2.isDisplayed());
-        System.out.println("row 2 is displayed");
+        try {
+            WebElement row2Input = driver.findElement(By.xpath("//div[@id='row2']/input"));
+            Assert.assertTrue(row2Input.isDisplayed(), "Row 2 input is not displayed");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         //sleep for 5 seconds
-        System.out.println("sleep for 5 seconds");
         sleep(5000);
 
-        System.out.println("close browser");
     }
-
-
-
 
     //sleep for m seconds
     private static void sleep(long m) {
