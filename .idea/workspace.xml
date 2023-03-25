@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2051ac38-cf17-4bac-9ac5-ca68d22ae84a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/ExceptionsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/ExceptionsTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
       <recent name="C:\Users\ariel\learning_projects\selenium\selenium-for-beginners\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/LoginTests.xml">
+  <component name="RunManager" selected="TestNG.ExceptionsTests">
     <configuration name="Negative Tests" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -148,6 +149,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExceptionsTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-for-beginners" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.herokuapp.theinternet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
+      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.ExceptionsTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-for-beginners" />
       <shortenClasspath name="NONE" />
@@ -175,23 +193,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NegativeTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium-for-beginners" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.herokuapp.theinternet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
-      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.NegativeTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NegativeTests.incorrectPasswordTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-for-beginners" />
       <extension name="coverage">
@@ -213,19 +214,19 @@
     <list>
       <item itemvalue="Maven.Positive Tests" />
       <item itemvalue="Maven.Negative Tests" />
+      <item itemvalue="TestNG.ExceptionsTests" />
       <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/LoginTests.xml" />
       <item itemvalue="TestNG.LoginTests" />
       <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/NegativeTests.xml" />
-      <item itemvalue="TestNG.NegativeTests" />
       <item itemvalue="TestNG.NegativeTests.incorrectPasswordTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ExceptionsTests" />
         <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/LoginTests.xml" />
         <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/NegativeTests.xml" />
         <item itemvalue="TestNG.LoginTests" />
         <item itemvalue="TestNG.NegativeTests.incorrectPasswordTest" />
-        <item itemvalue="TestNG.NegativeTests" />
       </list>
     </recent_temporary>
   </component>

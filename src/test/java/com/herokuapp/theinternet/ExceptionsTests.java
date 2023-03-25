@@ -1,11 +1,11 @@
 package com.herokuapp.theinternet;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.Assert;
+import org.testng.annotations.*;
 
 public class ExceptionsTests {
 
@@ -18,12 +18,40 @@ public class ExceptionsTests {
         System.setProperty("webdriver.com.edge.driver", "src/main/resources/msedgedriver.exe");
         driver = new EdgeDriver();
 
-        //sleep for 3 seconds
-        sleep(2000);
-
         //maximize browser window
         driver.manage().window().maximize();
 
+    }
+
+    @Test
+    public void addNewRowTest() {
+        System.out.println("Starting addNewRowTest");
+
+        //open test page
+        System.out.println("open test page");
+        String url = "https://practicetestautomation.com/practice-test-exceptions/";
+        driver.get(url);
+
+        //sleep for 2 seconds
+        System.out.println("sleep for 2 seconds");
+        sleep(2000);
+
+        //click on add button
+        System.out.println("click on add button");
+        WebElement addButton = driver.findElement(By.xpath("/html//button[@id='add_btn']"));
+        addButton.click();
+
+        //check if row 2 is displayed
+        System.out.println("check if row 2 is displayed");
+        WebElement row2 = driver.findElement(By.xpath("//div[@id='rows']/div[3]/div[@class='row']/input[@type='text']"));
+        Assert.assertTrue(row2.isDisplayed());
+        System.out.println("row 2 is displayed");
+
+        //sleep for 5 seconds
+        System.out.println("sleep for 5 seconds");
+        sleep(5000);
+
+        System.out.println("close browser");
     }
 
 
