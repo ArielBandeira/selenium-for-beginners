@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2051ac38-cf17-4bac-9ac5-ca68d22ae84a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/InvalidElementStateExceptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/InvalidElementStateExceptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestSuites/Debug.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestSuites/Debug.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
       <recent name="C:\Users\ariel\learning_projects\selenium\selenium-for-beginners\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.InvalidElementStateExceptionTest">
+  <component name="RunManager" selected="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/Debug.xml">
     <configuration name="Negative Tests" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -169,24 +169,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ElementNotInteractableExceptionTest.textIsSavedTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium-for-beginners" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.herokuapp.theinternet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
-      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.ElementNotInteractableExceptionTest" />
-      <option name="METHOD_NAME" value="textIsSavedTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="InvalidElementStateExceptionTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-for-beginners" />
       <extension name="coverage">
@@ -204,7 +186,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvalidElementStateExceptionTest.editInputTextTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="StaleElementReferenceExceptionTest.instructionsTextIsHiddenTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-for-beginners" />
       <extension name="coverage">
         <pattern>
@@ -213,9 +195,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
-      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.InvalidElementStateExceptionTest" />
-      <option name="METHOD_NAME" value="editInputTextTest" />
+      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.StaleElementReferenceExceptionTest" />
+      <option name="METHOD_NAME" value="instructionsTextIsHiddenTest" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeoutExceptionTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-for-beginners" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.herokuapp.theinternet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
+      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.TimeoutExceptionTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -226,18 +225,18 @@
       <item itemvalue="Maven.Positive Tests" />
       <item itemvalue="Maven.Negative Tests" />
       <item itemvalue="TestNG.InvalidElementStateExceptionTest" />
+      <item itemvalue="TestNG.StaleElementReferenceExceptionTest.instructionsTextIsHiddenTest" />
+      <item itemvalue="TestNG.TimeoutExceptionTest" />
       <item itemvalue="TestNG.ElementNotInteractableExceptionTest" />
-      <item itemvalue="TestNG.ElementNotInteractableExceptionTest.textIsSavedTest" />
-      <item itemvalue="TestNG.InvalidElementStateExceptionTest.editInputTextTest" />
       <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/Debug.xml" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/Debug.xml" />
+        <item itemvalue="TestNG.TimeoutExceptionTest" />
+        <item itemvalue="TestNG.StaleElementReferenceExceptionTest.instructionsTextIsHiddenTest" />
         <item itemvalue="TestNG.InvalidElementStateExceptionTest" />
         <item itemvalue="TestNG.ElementNotInteractableExceptionTest" />
-        <item itemvalue="TestNG.C:/Users/ariel/learning_projects/selenium/selenium-for-beginners/src/test/resources/TestSuites/Debug.xml" />
-        <item itemvalue="TestNG.InvalidElementStateExceptionTest.editInputTextTest" />
-        <item itemvalue="TestNG.ElementNotInteractableExceptionTest.textIsSavedTest" />
       </list>
     </recent_temporary>
   </component>

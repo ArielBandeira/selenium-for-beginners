@@ -2,7 +2,7 @@
 
 <suite name="ExceptionsTests" verbose="1" >
 
-    <test name="ExceptionsTest">
+    <test name="NoSuchElementException">
         <parameter name="browser" value="edge"></parameter>
         <classes>
             <class name="com.herokuapp.theinternet.NoSuchElementExceptionTest">
@@ -30,6 +30,28 @@
             <class name="com.herokuapp.theinternet.InvalidElementStateExceptionTest">
                 <methods>
                     <include name="editInputTextTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="StaleElementReferenceException">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="com.herokuapp.theinternet.StaleElementReferenceExceptionTest">
+                <methods>
+                    <include name="instructionsTextIsHiddenTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TimeoutException">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="com.herokuapp.theinternet.TimeoutExceptionTest">
+                <methods>
+                    <include name="clickAddButtonTest" />
                 </methods>
             </class>
         </classes>
